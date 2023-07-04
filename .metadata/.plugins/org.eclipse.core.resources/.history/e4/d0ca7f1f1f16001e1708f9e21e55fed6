@@ -1,0 +1,13 @@
+package day10;
+
+public class ArrayListEx {
+
+	public static void main(String[] args) {
+		
+		String[] a = new String[10];
+		a[0] = "어렵다";
+		
+		System.out.println(a[0]);
+	}
+
+}

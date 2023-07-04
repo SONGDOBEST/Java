@@ -1,0 +1,57 @@
+package day09;
+
+public class People {
+	//필드
+	
+	private String name;
+	private int age;
+	
+	// 생성자
+	
+	public People() {
+		
+	}
+	public People(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	// method
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getAge() {
+		return age;
+	}
+	
+	
+	
+	public void print() {
+		System.out.println(name+"\t"+age);
+	}
+	public void print1() {
+		System.out.println("이름\t나이");
+		System.out.println("=============");
+	}
+	
+	
+	
+	public void ageUp() {
+		age += 2;
+	}
+	public void ageUp1(int a) {
+		age += a;
+	}
+	
+	
+	
+	
+}

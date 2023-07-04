@@ -1,0 +1,18 @@
+package day11;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UserMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<User> list = new ArrayList<User>();
+		User m = new User();
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("메뉴 입력: ");
+	}
+
+}

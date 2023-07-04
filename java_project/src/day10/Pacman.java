@@ -1,0 +1,76 @@
+package day10;
+
+import java.util.Scanner;
+
+public class Pacman {  public static void main(String[] args) {
+        char[][] grid = {
+            {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+            {'#', '.', '.', '.', '#', '.', '.', '.', '.', '.', '#'},
+            {'#', '.', '#', '.', '#', '.', '#', '#', '#', '.', '#'},
+            {'#', '.', '#', '.', '.', '.', '.', '.', '#', '.', '#'},
+            {'#', '.', '#', '.', '#', '#', '#', '.', '#', '.', '#'},
+            {'#', '.', '.', '.', '.', '.', '#', '.', '#', '.', '#'},
+            {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}
+        };
+
+        int pacmanRow = 1;
+        int pacmanCol = 1;
+        int score = 0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            displayGrid(grid);
+
+            System.out.println("Score: " + score);
+            System.out.print("Enter your move (w/a/s/d): ");
+            char move = scanner.next().charAt(0);
+
+            int newRow = pacmanRow;
+            int newCol = pacmanCol;
+
+            switch (move) {
+                case 'w':
+                    newRow--;
+                    break;
+                case 'a':
+                    newCol--;
+                    break;
+                case 's':
+                    newRow++;
+                    break;
+                case 'd':
+                    newCol++;
+                    break;
+            }
+
+            if (grid[newRow][newCol] == '.') {
+                grid[pacmanRow][pacmanCol] = '.';
+                pacmanRow = newRow;
+                pacmanCol = newCol;
+                grid[pacmanRow][pacmanCol] = 'P';
+                score++;
+            } else if (grid[newRow][newCol] == '#') {
+                System.out.println("Invalid move. Try again!");
+            }
+
+            if (score == 6) {
+                System.out.println("Congratulations! You won!");
+                break;
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void displayGrid(char[][] grid) {
+        for (char[] row : grid) {
+            for (char cell : row) {
+                System.out.print(cell + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+

@@ -1,0 +1,12 @@
+package ex_01;
+
+public class Student {
+	private String sno;
+	private String sname;
+	private String address;
+	private String dept;
+	
+	
+	
+	
+}

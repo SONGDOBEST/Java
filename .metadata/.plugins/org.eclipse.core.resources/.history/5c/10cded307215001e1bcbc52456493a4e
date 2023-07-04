@@ -1,0 +1,24 @@
+package day09;
+
+public class FruitMain {
+
+	public static void main(String[] args) {
+		
+		Fruit apple = new Fruit();
+		apple.name = "사과";
+		apple.color = "빨강";
+		apple.isSeed = true;
+		
+		
+		
+				
+		Fruit banana = new Fruit();
+		banana.name = "바나나";
+		banana.color = "노랑";
+		banana.isSeed = false;
+		
+		
+
+	}
+
+}

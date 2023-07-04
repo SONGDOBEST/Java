@@ -1,0 +1,33 @@
+package ex_01;
+
+import java.util.Scanner;
+
+public class Dimension {
+	public static void run() {
+		String[] name = new String[22];
+		String[] address = new String[22];
+		
+		int cnt = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("....................................");
+		System.out.println("1. 정보 입력 2. 정보 열람 0. 종료");
+		System.out.println("메뉴 입력: ");
+		int menu = sc.nextInt();
+		
+		if(menu == 1) {
+			System.out.println("이름 입력: ");
+			name[cnt] = sc.next();
+			System.out.println("주소 입력: ");
+			address[cnt] = sc.next();
+			cnt++;
+		}else if(menu == 2) {
+			System.out.println("이름\t주소");
+			System.out.println("=====================");
+			for(int i = 0; i<cnt; i++) {
+				System.out.printf("%s\t%s", name, address);
+			}
+		}
+		
+	}
+}

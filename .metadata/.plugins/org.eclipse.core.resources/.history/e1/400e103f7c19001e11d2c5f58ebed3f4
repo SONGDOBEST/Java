@@ -1,0 +1,13 @@
+package ex_01;
+
+public class Car {
+	public String name;
+	public int wheel;
+	public String color;
+	public int price;
+	
+	
+	
+	
+
+}

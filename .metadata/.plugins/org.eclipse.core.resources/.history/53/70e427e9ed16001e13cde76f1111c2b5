@@ -1,0 +1,39 @@
+package day11;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		List<Member> list = new ArrayList<Member>();
+		
+		while(true) {
+			System.out.println("1.멤버등록 2.멤버리스트 3.멤버검색 0.종료");
+			System.out.println("메뉴 선택: ");
+			int menu = sc.nextInt();
+			
+			if(menu == 1) {
+				System.out.println("id 입력");
+				System.out.println("email 입력");
+				System.out.println("pw 입력");
+				System.out.println("이름 입력");
+				
+				Member m = new Member(sc.nextLong(), sc.next(), sc.next(), sc.next());
+				
+			}else if(menu == 2) {
+				
+			}else if(menu == 3) {
+				
+			}else if(menu == 0) {
+				
+			}else {
+				System.out.println("잘못된 입력입니다.");
+			}
+		}
+	}
+
+}

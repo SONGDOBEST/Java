@@ -1,0 +1,13 @@
+package ex_01;
+
+public class Main {
+
+	public static void main(String[] args) {
+//	TypeSample.run();
+//	Operation.run();
+//	Condition.run();
+	Repeat.run();
+		
+	}
+	//인덴트 (indent) :: Tab눌러서 하는거
+}

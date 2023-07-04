@@ -1,0 +1,35 @@
+package day09;
+
+public class PeopleMain {
+
+	public static void main(String[] args) {
+		
+		People p1 = new People("김범수", 26);
+		
+		
+		People p2 = new People();
+		
+		p2.setName("이현우");
+		p2.setAge(26);
+		
+		
+		p1.print1();
+		System.out.println(p1.getName()+"\t"+p1.getAge());
+		System.out.println(p2.getName()+"\t"+p2.getAge());
+		
+		People p3 = new People("홍길동", 90);
+		
+		p3.ageUp();
+		p3.print();
+		
+		People p4 = new People("이순신", 80);
+		p4.ageUp1(7);
+		p4.print();
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,60 @@
+package day11;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class UserMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<User> list = new ArrayList<User>();
+		Scanner sc = new Scanner(System.in);
+		while (true) {
+			System.out.println("=====회원가입=====");
+			System.out.println("1.회원가입 2.로그인 3.리스트 0.종료");
+			System.out.println("메뉴 입력: ");
+			int menu = sc.nextInt();
+
+			if (menu == 1) {
+				User u = new User();
+				System.out.println("이름을 입력해주세요: ");
+				u.setName(sc.next());
+				System.out.println("아이디를 입력해주세요: ");
+				u.setId(sc.next());
+				System.out.println("비밀번호를 입력해주세요: ");
+				u.setPw(sc.next());
+				
+				System.out.println("환영합니다! "+u.getName()+"님!");
+				list.add(u);
+				
+				
+			} else if (menu == 2) {
+				System.out.println("아이디를 입력해주세요.");
+				String loginId = sc.next();
+				System.out.println("비밀번호를 입력해주세요.");
+				String loginPw = sc.next();
+				boolean login = false;
+				for (int i = 0; i < list.size(); i++) {
+					if (loginId.equals(list.get(i).getId()) && loginPw.equals(list.get(i).getPw())) {
+						System.out.println("로그인 성공!\n환영합니다" + list.get(i).getName() + "님!");
+						login = true;
+					}
+				}if(!login) {
+					System.out.println("로그인 정보가 잘못되었습니다.");
+				}
+			} else if (menu == 3) {
+				System.out.println("이름\t아이디\t비밀번호\t가입날짜");
+				System.out.println("===============================");
+				for(int i = 0; i<list.size(); i++) {
+					list.get(i).print();
+				}
+			} else if (menu == 0) {
+				break;
+			} else {
+				System.out.println("잘못된 입력입니다.");
+			}
+		}System.out.println("프로그램을 종료합니다!");
+	}
+
+}

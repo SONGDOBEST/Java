@@ -1,0 +1,11 @@
+package ex_01;
+
+import java.util.Scanner;
+
+public class Address {
+	public static void run() {
+		Student[] students = new Student[5];
+		
+		Scanner sc = new Scanner(System.in);
+	}
+}

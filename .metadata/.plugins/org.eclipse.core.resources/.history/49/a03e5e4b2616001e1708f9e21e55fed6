@@ -1,0 +1,43 @@
+package day10;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		
+		List<Student> list = new ArrayList<Student>();
+		Student s = new Student();
+		s.no = "37892";
+		s.name = "이현우";
+		s.dept = "간호학과";
+		s.year = 4;
+		
+		
+		list.add(s);
+		
+		
+		Student s1 = new Student();
+		s1.no = "37913";
+		s1.name = "김범수";
+		s1.dept = "컴공";
+		s1.year = 3;
+		
+		list.add(s1);
+		
+		System.out.println(list.print(0));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

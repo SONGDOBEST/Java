@@ -1,0 +1,124 @@
+package day10;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		List<Member> list = new ArrayList<Member>();
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy년MM월dd일 hh:mm:ss");
+		
+		while (true) {
+			System.out.println("============멤버가입===========");
+			System.out.println("1.등록 2.리스트 3.검색 4.멤버수정 5.삭제 0.종료 ");
+			System.out.println("메뉴 입력: ");
+			int menu = sc.nextInt();
+
+			// 이메일 비밀번호 이름
+
+			if (menu == 1) {
+				
+				Member m = new Member();
+				System.out.println("이메일 입력: ");
+				m.setEmail(sc.next());
+				System.out.println("비밀번호 입력: ");
+				m.setPassword(sc.next());
+				System.out.println("이름 입력: ");
+				m.setName(sc.next());
+				m.setJoinDate(dtf.format(LocalDateTime.now()));
+				System.out.println(m.getName() + "님 가입을 환영합니다.");
+				list.add(m);
+			} else if (menu == 2) {
+				System.out.println("이메일\t비밀번호\t이름\t가입날짜");
+				System.out.println("==================================");
+				for (int i = 0; i < list.size(); i++) {
+					list.get(i).print();
+				}
+			} else if (menu == 3) {
+				System.out.println("이메일을 입력해주세요.: ");
+				String userEmail = sc.next();
+				boolean find = false;
+				for (int i = 0; i < list.size(); i++) {
+					if (userEmail.equals(list.get(i).getEmail())) {
+						find = true;
+						System.out.println("이메일\t비밀번호\t이름\t가입날짜");
+						System.out.println("==================================");
+						list.get(i).print();
+					}
+				}
+				if (!find) {
+					System.out.println("정보가 없습니다.");
+				}
+
+			} else if (menu == 4) {
+				System.out.println("비밀번호와 이름을 수정할 수 있습니다.");
+				System.out.println("이메일을 입력해주세요.");
+				boolean find2 = false;
+				String useremail = sc.next();
+				for (int i = 0; i < list.size(); i++) {
+					if (useremail.equals(list.get(i).getEmail())) {
+						System.out.println("수정할 정보를 입력해주세요.\n1.비밀번호 2.이름");
+						System.out.println("메뉴 입력: ");
+						int menu2 = sc.nextInt();
+						boolean find3 = false;
+						if (menu2 == 1) {
+							System.out.println("기존 비밀번호를 입력해주세요");
+							String oldPassword = sc.next();
+							if (oldPassword.equals(list.get(i).getPassword())) {
+								System.out.println("새로운 비밀번호를 입력해주세요");
+								list.get(i).setPassword(sc.next());
+								find3 = true;
+							}
+							if (!find3) {
+								System.out.println("잘못된 비밀번호입니다.");
+							}
+
+						}else if (menu2 == 2) {
+							System.out.println("기존 이름을 입력해주세요");
+							String oldName = sc.next();
+							if (oldName.equals(list.get(i).getName())) {
+								System.out.println("새로운 이름을 입력해주세요");
+								list.get(i).setName(sc.next());
+								find3 = true;
+							}
+							if (!find3) {
+								System.out.println("잘못된 이름입니다.");
+							}
+
+						}
+
+					}
+				}
+				if (!find2) {
+					System.out.println("정보가 없습니다.");
+				}
+			} else if (menu == 5) {
+				System.out.println("삭제할 이메일을 입력해주세요");
+				String dEmail = sc.next();
+				boolean find4 = false;
+				for(int i = 0; i<list.size(); i++) {
+					find4 = true;
+					if(dEmail.equals(list.get(i).getEmail())) {
+						list.remove(i);
+					}
+				}
+				if(!find4) {
+					System.out.println("일치하는 이메일이 없습니다.");
+				}
+			} else if (menu == 0) {
+				break;
+			} else {
+				System.out.println("잘못된 입력입니다.");
+			}
+
+		}System.out.println("프로그램 종료");
+
+	}
+
+}

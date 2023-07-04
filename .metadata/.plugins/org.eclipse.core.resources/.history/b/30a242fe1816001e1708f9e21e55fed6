@@ -1,0 +1,12 @@
+package day10;
+
+public class Fruit {
+	String name;
+	String color;
+	boolean isSeed;
+	
+	public void setName() {
+		
+	}
+	
+}

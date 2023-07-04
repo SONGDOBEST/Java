@@ -1,0 +1,58 @@
+package ex_02;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Sungjuk {
+	public static void run() {
+		Scanner sc = new Scanner(System.in);
+		List<VOscore> list = new ArrayList<VOscore>();
+		int cnt = 0;
+
+		while (true) {
+			System.out.println("............성적관리................");
+			System.out.println("1.입력 |2.조회 |3.목록 |4.수정 |5.삭제 |0.종료");
+			System.out.println("메뉴 입력");
+			String menu = sc.nextLine();
+
+			if (menu.equals("1")) {
+				VOscore s1 = new VOscore();
+				System.out.println(".................성적입력...............");
+				System.out.println("이름 입력: ");
+				s1.setSname(sc.nextLine());
+				System.out.println("학과 입력: ");
+				s1.setDept(sc.nextLine());
+				System.out.println("국어 점수: ");
+				s1.setKor(sc.nextInt());
+				System.out.println("영어 점수: ");
+				s1.setEng(sc.nextInt());
+				System.out.println("수학 점수: ");
+				s1.setMat(sc.nextInt());
+				sc.nextLine();
+
+				s1.setSno("2023" + (cnt + 1));
+				list.add(s1);
+
+			} else if (menu.equals("2")) {
+				System.out.println("..............성적조회...............");
+				for (VOscore a : list) {
+					a.print();
+				}
+
+			} else if (menu.equals("3")) {
+
+			} else if (menu.equals("4")) {
+
+			} else if (menu.equals("5")) {
+
+			} else if (menu.equals("0")) {
+
+			} else {
+				System.out.println("잘못된 입력입니다.");
+			}
+
+		}
+
+	}
+}

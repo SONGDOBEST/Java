@@ -1,0 +1,17 @@
+package ex_01;
+
+public class Car {
+
+	int num1;
+	int num2;
+	int sum;
+	
+	public void mul() {
+		System.out.println(num1*num2);
+	}
+	
+	
+	
+	
+
+}

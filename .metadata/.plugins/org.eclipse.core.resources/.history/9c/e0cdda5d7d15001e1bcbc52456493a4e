@@ -1,0 +1,22 @@
+package day09;
+
+public class PeopleMain {
+
+	public static void main(String[] args) {
+		
+		People p1 = new People("김범수", 26);
+		
+		
+		People p2 = new People();
+		
+		p2.setName("이현우");
+		p2.setAge(26);
+		
+		p1.print();
+		p2.print();
+		
+		
+		
+	}
+
+}

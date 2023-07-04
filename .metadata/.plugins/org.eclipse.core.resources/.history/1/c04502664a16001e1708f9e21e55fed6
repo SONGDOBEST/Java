@@ -1,0 +1,51 @@
+package day10;
+
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		List<Member> list = new ArrayList<Member>(); 
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy년MM월dd일 hh:mm:ss");
+		Member m = new Member();
+		
+		while(true) {
+			System.out.println("============멤버가입===========");
+			System.out.println("1.등록 2.리스트 3.검색 4.멤버수정 5.삭제 0.종료 ");
+			System.out.println("메뉴 입력: ");
+			int menu = sc.nextInt();
+			
+			//이메일 비밀번호 이름
+			
+			if(menu == 1) {
+				System.out.println("이름 입력: ");
+				String 
+				System.out.println("비밀번호 입력: ");
+				System.out.println("이름 입력: ");
+				
+			}else if(menu == 2) {
+				
+			}else if(menu == 3) {
+				
+			}else if(menu == 4) {
+				
+			}else if(menu == 5) {
+				
+			}else if(menu == 0) {
+				
+			}else {
+				
+			}
+			
+			
+		}
+	
+	
+	}
+
+}

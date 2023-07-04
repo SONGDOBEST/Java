@@ -1,0 +1,74 @@
+package ex_01;
+
+public class CarMain {
+
+	public static void main(String[] args) {
+		Car c = new Car();
+		c.num1 = 1;
+		c.num2 = 2;
+		
+		c.sum();
+		
+		c.sub(1, 2);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

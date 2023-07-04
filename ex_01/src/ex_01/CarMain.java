@@ -1,0 +1,11 @@
+package ex_01;
+
+public class CarMain {
+
+	public static void main(String[] args) {
+		Car sc = new Car();
+		sc.div(1, 2);
+		
+		
+	}
+}

@@ -1,0 +1,15 @@
+package ex_01;
+
+import java.util.Scanner;
+
+public class Condition {	
+	public static void run() {
+		//if문 switch-case
+		
+		Scanner sc = new Scanner(System.in);
+		int grade = sc.nextInt();
+		
+		
+		
+	}
+}

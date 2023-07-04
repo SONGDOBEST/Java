@@ -1,0 +1,38 @@
+package day09;
+
+public class PeopleMain {
+
+	public static void main(String[] args) {
+		People lang = new People();
+		People p1 = new People("김범수", 26);
+		
+		
+		People p2 = new People();
+		
+		p2.setName("이현우");
+		p2.setAge(26);
+		
+		
+		lang.print1();
+		System.out.println(p1.getName()+"\t"+p1.getAge());
+		System.out.println(p2.getName()+"\t"+p2.getAge());
+		
+		People p3 = new People(); //기본생성자
+		p3.setName("홍길동");
+		p3.setAge(90);
+		
+		p3.ageUp(); //90 + 1
+		p3.print();
+		
+		
+		People p4 = new People("이순신", 80); //생성자 양식에 맞추어 생성
+		p4.ageUp1(5); //80 + 5
+		p4.print();
+		
+		
+		
+		
+		
+	}
+
+}

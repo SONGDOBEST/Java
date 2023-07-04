@@ -1,0 +1,70 @@
+package ex_02;
+
+public class VOscore { //자바빈
+	private int kor;
+	private int mat;
+	private int eng;
+	private String dept;
+	private String sname;
+	private String sno;
+	private String grade;
+	private int sum = kor+mat+eng;
+	private double avg = sum/(double)3;
+	
+	
+	public int getKor() {
+		return kor;
+	}
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+	public int getMat() {
+		return mat;
+	}
+	public void setMat(int mat) {
+		this.mat = mat;
+	}
+	public int getEng() {
+		return eng;
+	}
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+	public String getDept() {
+		return dept;
+	}
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public String getSno() {
+		return sno;
+	}
+	public void setSno(String sno) {
+		this.sno = sno;
+	}
+	public int getSum() {
+		return sum = kor+eng+mat;
+	}
+	public double getAvg() {
+		return avg = sum/(double)3;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void print() {
+		System.out.println(sno+"\t"+sname+"\t"+dept+"\t"+kor+"\t"+eng+"\t"+mat+"\t"+sum+"\t"+avg+"\t"+grade);
+
+	}
+	public VOscore() {
+		
+	}
+}

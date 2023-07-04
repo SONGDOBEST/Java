@@ -1,0 +1,26 @@
+package day10;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListEx {
+
+	public static void main(String[] args) {
+		
+		String[] a = new String[10];
+		a[0] = "hello world!";
+		
+		System.out.println(a[0]);
+		
+		a[1] = "안녕!";
+		
+		
+		//ArrayList
+		List<String> b = new ArrayList<String>(); //꺽쇠 안 변수 타입은 안쓰면 앞서 정의해준 타입대로 따라감.
+		b.add("살려는 드릴게"); //값 추가
+		System.out.println(b.get(0));
+		b.set(0, "장난이 심한거 아니오.");
+		
+	}
+
+}

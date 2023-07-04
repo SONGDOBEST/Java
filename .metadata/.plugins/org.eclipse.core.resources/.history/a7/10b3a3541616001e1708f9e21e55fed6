@@ -1,0 +1,14 @@
+package day10;
+
+public class AnimalMain {
+
+	public static void main(String[] args) {
+		Animal dog = new Animal();
+		
+		dog.name = "덕구";
+		dog.sound = "으르렁캉캉";
+		dog.leg = 4;
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package day09;
+
+public class AnimalMain {
+
+	public static void main(String[] args) {
+		
+		Animal c1 = new Animal();
+		Animal c2 = new Animal();
+		Animal c3 = new Animal();
+		Animal c4 = new Animal();
+		
+		
+		c1.setName("망치");
+		c1.setSound("그르릉컹컹");
+		c1.setLeg(4);
+		
+		System.out.println(c1.setName("망망치")));
+		
+		c2.setName("나비");
+		c2.setSound("미야아아옹");
+		c2.setLeg(4);
+		
+		c3.setName("양념이");
+		c3.setSound("꼬끼옥");
+		c3.setLeg(2);
+		
+		c4.setName("슉슉이");
+		c4.setSound("슉슉");
+		c4.setLeg(0);
+		
+		c1.print();
+		c2.print();
+		c3.print();
+		c4.print();
+		
+		
+		
+	}
+
+}
